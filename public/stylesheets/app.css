@@ -1,0 +1,30 @@
+header {
+    background-color: #244751;
+    color: #e8fdff;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: "Montserrat", sans-serif;
+}
+
+main {
+    background-color: white;
+    padding: 12px;
+}
+
+.finstagram-post {
+    margin-bottom: 48px;
+}
+
+.finstagram-post .user-info img {
+    border-radius: 25%;
+}
+
+a.photo {
+    transition: padding 0.5s;
+}
+
+a.photo:hover {
+    padding: 10px;
+}
