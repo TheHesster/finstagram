@@ -1,6 +1,6 @@
 <h2>Join Finstagram</h2>
 
-<%= erb(:'shared/errors', { locals: { user: @user }}) %>
+<%= erb(:'shared/errors', { locals: { data: @user }}) %>
 
 <form method="POST" action="/signup">
     <div class="form-group">
