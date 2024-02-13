@@ -21,6 +21,10 @@ main {
     border-radius: 25%;
 }
 
+.finstagram-post .photo img {
+    border-radius: 25px;
+}
+
 a.photo {
     transition: padding 0.5s;
 }
