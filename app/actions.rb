@@ -114,3 +114,19 @@ delete '/likes/:id' do
     like.destroy
     redirect(back)
 end
+
+get '/account' do
+    erb(:account)
+end
+
+get '/users/:id' do
+    erb(:"/users/show")
+end
+
+put '/users/:id' do
+    avatar_url = params[:avatar_url]
+    user = User.find_by(id: current_user.id)
+    user.avatar_url = avatar_url
+    user.save
+    redirect(to('/'))
+end
