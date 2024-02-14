@@ -3,6 +3,19 @@ header {
     color: #e8fdff;
 }
 
+header a:visited {
+    color: #e8fdff;
+}
+
+header a:hover {
+    color: #111111;
+    text-shadow: 1px 1px 3px #e8fdff;
+}
+
+header .login-info i {
+    padding: 5px 5px;
+}
+
 body {
     background-color: whitesmoke;
     font-family: "Montserrat", sans-serif;
@@ -23,6 +36,17 @@ main {
 
 .finstagram-post .photo img {
     border-radius: 25px;
+}
+
+.finstagram-post .comments .comment-line {
+    overflow: hidden;
+    display: flex;
+    align-items: baseline;
+    margin: 5px 0px;
+}
+
+.finstagram-post .comments .comment-time {
+    margin-left: auto;
 }
 
 a.photo {

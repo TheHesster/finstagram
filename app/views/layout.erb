@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="/stylesheets/lib.css">
         <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/b86da63f32.js" crossorigin="anonymous"></script>
         <title>Finstagram</title>
     </head>
     <body>
@@ -18,11 +19,12 @@
             </h1>
             <div class="login-info">
                 <% if current_user %>
-                    <a href="/users/<%= current_user.id %>"><%= current_user.username %></a>
-                    <a href="/logout">Logout</a>
+                    Welcome, <%= current_user.username %>               
+                    <a href="/users/<%= current_user.id %>"><i class="fa-solid fa-gear"></i></a>
+                    <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
                 <% else %>
-                    <a href="/login">Login</a>
-                    <a href="/signup">Signup</a>
+                    <a href="/login"><i class="fa-solid fa-right-to-bracket"></i></a>
+                    <a href="/signup"><i class="fa-solid fa-user-plus"></i></a>
                 <% end %>
             </div>
         </header>

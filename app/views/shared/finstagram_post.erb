@@ -16,10 +16,8 @@
   <% end %>
   <ul class="comments">
     <% finstagram_post.comments.reverse.each do |comment| %>
-      <li>
-        <p>
-          <%= comment.user.username %>: <%= comment.text %> <span class="comment-time"><%= comment.humanized_time_ago %></span>
-        </p>
+      <li class="comment-line">
+        <%= comment.user.username %>: <%= comment.text %> <span class="comment-time"><%= comment.humanized_time_ago %></span>
       </li>
     <% end %>
   </ul>
