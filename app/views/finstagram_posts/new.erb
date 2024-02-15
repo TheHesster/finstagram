@@ -1,6 +1,8 @@
-<h2>New Post</h2>
+<h2>New Finstagram Post</h2>
 
 <%= erb(:'shared/errors', { locals: { data: @finstagram_post }}) %>
+
+<img id="preview" src="" alt="Finstagram preview image" style="display: none; max-width: 200px;">
 
 <form action="/finstagram_posts" method="POST">
   <div class="form-group">
@@ -11,3 +13,21 @@
     <button class="button" type="submit">Post</button>
   </div>
 </form>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var photoUrlElm = document.getElementById("photo_url");
+    var previewElm = document.getElementById("preview");
+
+    photoUrlElm.addEventListener("blur", function (event) {
+      var url = event.target.value;
+
+      if(url) {
+        previewElm.setAttribute("src", url);
+        previewElm.style.display = "block";
+      } else {
+        previewElm.style.display = "none";
+      }
+    });
+  });
+</script>
